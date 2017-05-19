@@ -1,4 +1,4 @@
-//require the express nodejs module
+//require the express nodejs module - agh!
 var express = require('express'),
 	//set an instance of exress
 	app = express(),
