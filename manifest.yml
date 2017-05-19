@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: mybankpov
-  host: mybankpov
+  name: bureau-pov
+  host: bureau-pov
   disk_quota: 1024M
