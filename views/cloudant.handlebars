@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index">Form Submit</a></li>
+        <li class="active"><a href="cloudant">Cloudant<span class="sr-only">(current)</span></a></li>
+        <li><a href="weather">Weather Channel</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    
+      var decodedJson = decodeURIComponent("{{{encodedJson}}}");
+      var jsonObj = JSON.parse(decodedJson);
+      console.log(jsonObj);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable(jsonObj);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+</script>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{ message }}</h1>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </div>
+</div>
+<div id="piechart" style="width: 900px; height: 500px;"></div>

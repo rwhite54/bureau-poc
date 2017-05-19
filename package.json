@@ -1,0 +1,20 @@
+{
+	"name": "nodewebmaster01",
+	"version": "0.0.2",
+	"private": true,
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.15.2",
+		"express": "4.13.x",
+		"express-handlebars": "*",
+		"openwhisk": "3.3.5",
+		"cloudant": "latest",
+		"cfenv": "1.0.x"
+	},
+	"repository": {},
+	"engines": {
+		"node": "4.x"
+	} 
+}

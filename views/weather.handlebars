@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index">Form Submit</a></li>
+        <li><a href="cloudant">Cloudant</a></li>
+        <li class="active"><a href="weather">Weather Channel<span class="sr-only">(current)</span></a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+
+</script>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Weather Channel API Call</div>
+  <div class="panel-body">Simple Weather Channel API call using GPS coordinates. Image is displayed by using the image code returned in the JSON then mapped to the correct png file.</div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>Norwich, UK</h1>
+    <h3>Temp (C) : {{ temp }}</h3>
+    <h3>Observation : {{ observation }}</h3>
+    <h3>Feels like : {{ feels }}</h3>
+    <img id="imageid" src="/images/18.png" alt="weather icon" style="width:128px;height:128px;">
+    <script>
+        document.getElementById("imageid").src="images/" + "{{{icon}}}" + ".png";
+    </script>
+  </div>
+</div>
